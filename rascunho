@@ -1,0 +1,21 @@
+banco: dados191n
+
+livros
+
+liv_codigo int pk
+liv_dtcadastro timestamp
+liv_titulo varchar(50)
+liv_edicao varchar(10)
+liv_ano numeric
+
+autores
+
+aut_codigo autoincrement
+aut_dtcadastro timestamp
+aut_nome varchar(40)
+aut_apelido varchar(10)
+aut_sexo char 1
+aut_telefone varchar 15
+aut_email varchar 40
+
+editoras

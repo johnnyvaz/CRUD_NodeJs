@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <!-- Meta tags Obrigatórias -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css"
+        integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+    <link rel="stylesheet" href="estilos.css">
+
+    <title>Formulário - Endereço</title>
+</head>
+
+<body>
+    <header>
+        <h3>Formulário - Cadastro de Endereço</h3>
+    </header>
+    <hr>
+
+    <form>
+        <fieldset class="form-group">
+            <div class="form-group row offset-md-2">
+                <label for="cep" class="col-md-2 col-form-label" align="right">CEP</label>
+                <div class="col-md-2">
+                    <input type="text" class="form-control" id="cep" placeholder="00.000-000">
+                </div>
+                <button type="button" class="btn btn-link">Alterar</button>
+            </div>
+            <div class="form-group row offset-md-2">
+                <label for="nomedest" class="col-md-2 col-form-label" align="right">Nome do Destinatário</label>
+                <div class="col-md-4">
+                    <input type="text" class="form-control" id="nomedest" placeholder="Nome do Destinatário">
+                </div>
+            </div>
+            <div class="form-group row offset-md-2">
+                <label for="endereco" class="col-md-2 col-form-label" align="right">Endereço</label>
+                <div class="col-md-6">
+                    <input type="text" class="form-control" id="endereco" placeholder="Endereço">
+                </div>
+            </div>
+            <div class="form-group row offset-md-2">
+                <label for="numero" class="col-md-2 col-form-label" align="right">Número</label>
+                <div class="col-md-2">
+                    <input type="number" class="form-control" id="numero" placeholder="Número">
+                </div>
+            </div>
+            <div class="form-group row offset-md-2">
+                <label for="complemento" class="col-md-2 col-form-label" align="right">Complemento</label>
+                <div class="col-md-3">
+                    <input type="text" class="form-control" id="complemento" placeholder="Complemento">
+                </div>
+            </div>
+            <div class="form-group row offset-md-2">
+                <label for="bairro" class="col-md-2 col-form-label" align="right">Bairro</label>
+                <div class="col-md-3">
+                    <input type="text" class="form-control" id="bairro" placeholder="Bairro">
+                </div>
+            </div>
+            <div class="form-group row offset-md-2">
+                <label for="cidade" class="col-md-2 col-form-label" align="right">Cidade</label>
+                <div class="col-md-3">
+                    <input type="text" class="form-control" id="cnpj" placeholder="Cidade">
+                </div>
+            </div>
+            <div class="form-group row offset-md-2">
+                <label for="estado" class="col-md-2 col-form-label" align="right">Estado</label>
+                <div class="col-md-2">
+                    <select class="form-control" id="estado" placeholder="-">
+                        <option value="">Selecione</option>
+                        <option value="ac">Acre</option>
+                        <option value="al">Alagoas</option>
+                        <option value="ap">Amapá</option>
+                        <option value="am">Amazonas</option>
+                        <option value="ba">Bahia</option>
+                        <option value="ce">Ceará</option>
+                        <option value="df">Distrito Federal</option>
+                        <option value="es">Espírito Santo</option>
+                        <option value="go">Goiás</option>
+                        <option value="ma">Maranhão</option>
+                        <option value="mt">Mato Grosso</option>
+                        <option value="ms">Mato Grosso do Sul</option>
+                        <option value="mg">Minas Gerais</option>
+                        <option value="pa">Pará</option>
+                        <option value="pb">Paraíba</option>
+                        <option value="pr">Paraná</option>
+                        <option value="pe">Pernambuco</option>
+                        <option value="pi">Piauí</option>
+                        <option value="rj">Rio de Janeiro</option>
+                        <option value="rn">Rio Grande do Norte</option>
+                        <option value="rs">Rio Grande do Sul</option>
+                        <option value="ro">Rondônia</option>
+                        <option value="rr">Roraima</option>
+                        <option value="sc">Santa Catarina</option>
+                        <option value="sp">São Paulo</option>
+                        <option value="se">Sergipe</option>
+                        <option value="to">Tocantins</option>
+                    </select>
+                </div>
+            </div>
+            <div class="form-group row offset-md-2">
+                <label for="celular" class="col-md-2 col-form-label" align="right">Telefone Celular</label>
+                <div class="col-md-3">
+                    <input type="text" class="form-control" id="celular" placeholder="(XX) XXXXX-XXXX">
+                </div>
+            </div>
+            <div class="form-group row form-check offset-md-2">
+                <input type="checkbox" class="col-md-4 form-check-input" id="checkpadrao">
+                <label class="offset-md-2 form-check-label" for="checkpadrao">Definir este endereço como padrão para as próximas compras</label>
+            </div>
+            <div class="form-group row offset-md-2">
+                <div class="col-md-4 offset-md-1">
+                    <button type="button" class="btn btn-link">Cancelar</button>
+                    <button type="button" class="btn btn-success">Salvar e entregar aqui</button>
+                </div>
+            </div>
+        </fieldset>
+    </form>
+
+    <!-- JavaScript (Opcional) -->
+    <!-- jQuery primeiro, depois Popper.js, depois Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+        integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+        crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"
+        integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49"
+        crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"
+        integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy"
+        crossorigin="anonymous"></script>
+</body>
+
+</html>
