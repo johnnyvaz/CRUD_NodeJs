@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Sitema Johnny</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
+    <link rel="stylesheet" type="text/css" href="/css/styles.css">
+</head>
+<body>
+    <header>
+        
+        <section id="menuop">
+            <nav class="navbar navbar-inverse navbar-expand-lg navbar-black">
+                <ul class="nav navbar-nav mr-auto">
+                    <li class="nav-item active">
+                        <a class="nav-link" href="/">Home <span class="sr-only">(current)</span></a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="/formularios/menu">Formulários</a>
+                    </li>                
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            Livros
+                        </a>
+                        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                            <a class="dropdown-item" href="/livros/listar">Listar Livros</a>
+                            <a class="dropdown-item" href="/livros/novo">Adicionar Livro</a>
+                        </div>
+                    </li> 
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            Editoras
+                        </a>
+                        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                            <a class="dropdown-item" href="/editoras/listar">Listar Editoras</a>
+                            <a class="dropdown-item" href="/editoras/novo">Adicionar Editoras</a>
+                        </div>
+                    </li> 
+                    <li class="nav-item">
+                        <a class="nav-link" href="/filesistem">Manipular Texto</a>
+                    </li> 
+                    <li class="nav-item">
+                        <a class="nav-link" href="/config">Configurações</a>
+                    </li>              
+                </ul>  
+            </nav>              
+        </section>
+    </header>  
+    
+    
+    
+    
+    <main>
+        <div class="container">
+            <%- body %>
+        </div>
+    </main>
+    <footer>
+        <div id="rodape" class="card-footer text-muted text-center">
+            Desenvolvido por: <a href='http://johnnyvaz.com.br'>Johnny Vaz</a>
+            <p>
+                &#169; 2019 - <a href='https://site.fatecfranca.edu.br/'>Fatec Franca-SP</a> - Programação Script - NodeJS e ExpressJS.
+            </p>
+        </footer>
+        <%- defineContent('footer') %>
+    </footer>
+    
+</body>
+</html>  

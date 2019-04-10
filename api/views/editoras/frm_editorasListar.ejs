@@ -1,0 +1,69 @@
+<%- contentFor('body') %>
+
+<!-- <body>
+    
+    <header>
+        
+        
+        
+        
+        <nav>
+            <div>
+                
+                <a href="/">Menu Inicial</a>                       
+                <a href="/inicio/menueditoras">Menu Anterior</a>   
+                <a href="/editoras/Listar">Listar editoras</a>
+                <a href="/editoras/novo">Cadastrar editoras</a>
+                <a href="/editoras/Inativar">Inativar editoras</a>
+                
+            </div>
+        </nav>
+    </header> -->
+    <h3>
+        Listagem de Editoras
+    </h3>
+    <section id="listarEditoras">
+        
+        <fieldset>
+            <legend> Registros Cadastrados </legend>
+            <table class="table table-dark" id="registros">
+                <thead class="thead-dark">
+                    <tr>
+                        <th scope="col">Código</th>
+                        <th scope="col">Data Cadastro</th>
+                        <th scope="col">Nome</th>                        
+                        <th scope="col">Cidade</th>
+                        <th scope="col">CEP</th>                                                
+                        <th scope="col">Estado</th>
+                        <th scope="col">E-mail</th> 
+                        <th scope="col">Telefone</th>
+                        <th><a class="btn btn-success btn-block" href="/editoras/novo">Novo</a></th>
+                    </tr>
+                </thead>
+                <% for(i=0; i<editoras.length; i++) { %>
+                    <tr>
+                        <td> <%= editoras[i].edt_codigo %> </td>
+                        <td> <%= editoras[i].edt_dtcadastro %> </td>
+                        <td> <%= editoras[i].edt_nome %> </td>
+                        <td> <%= editoras[i].edt_cidade %> </td>
+                        <td> <%= editoras[i].edt_cep %> </td>
+                        <td> <%= editoras[i].edt_estado %> </td>
+                        <td> <%= editoras[i].edt_email %> </td>
+                        <td> <%= editoras[i].edt_telefone %> </td>
+                        
+                        <!--                            <td> <a href="/alterar?param_liv_codigo=<%= editoras[i].liv_codigo %>">alterar</a> </td>                        
+                            <td> <a href="#" onclick="excluirDados('<%= editoras[i].liv_codigo %>')">excluir</a> </td>                        
+                        -->
+                        <td><a class="btn btn-primary btn-block" href=<%="/editoras/editar/" + editoras[i].edt_codigo%>>Editar</a></td>
+                        <td><a class="btn btn-danger btn-block" href=<%="/editoras/inativar/" + editoras[i].edt_codigo%>>Inativar</a> </td>
+                        
+                    </tr>         
+                    <% } %>
+                    
+                </table>
+            </fieldset>            
+        </section>
+    </div>        
+    
+</body>
+</html>

@@ -1,0 +1,91 @@
+
+        <%- contentFor('body') %>
+
+    <div class="container-fluid">
+
+        <h3>
+            Novo Livro
+        </h3>
+        <hr>
+        <br>
+        
+<!-- aponta para o roteamento-->        
+        <form action="/livros/salvar" method="post">
+
+            <div class="form-group row">
+                <div class="col-md-1">
+                    <label>Codigo: </label>
+                    <input type="text" value="<%= livro[0].liv_codigo%>" name="liv_codigo" class="form-control" placeholder="Codigo" size="5" readonly>
+                </div>
+                <br>
+
+                <div class="col-md-5">
+                    <label>Título: </label>
+                    <input type="text" value="<%= livro[0].liv_titulo%>" name="liv_titulo" class="form-control" placeholder="Título" size="60" maxlength="50">
+                </div>
+                <br>
+
+                <div class="col-md-2">
+                    <label>Edição: </label>
+                    <input type="text" class="form-control" value="<%= livro[0].liv_edicao%>" name="liv_edicao" placeholder="Edição" size="15" maxlength="10">
+                </div>
+                <br>
+
+                <div class="col-md-2">
+                    <label>Isbn: </label>
+                    <input type="text" class="form-control" value="<%= livro[0].liv_isbn%>" name="liv_isbn" placeholder="Isbn" size="25" maxlength="20">
+                </div>
+                <br>
+
+                <div class="col-md-2">
+                    <label>Ano: </label>
+                    <input type="text" class="form-control" value="<%= livro[0].liv_ano%>" name="liv_ano" placeholder="Ano" size="5" maxlength="5">
+                </div>
+                <br>    
+    
+                <br>
+
+                <div class="form-group row">
+                    <label for="aut_codigo" class="col-md-4 col-form-label">Autor:</label>
+                    <div class="form-group col-md-5" >
+                        <select name="aut_codigo" id="aut_codigo" class="form-control form-control-sm" required aria-describedby="autorHelp" style="width:150px" >
+                            <option value=""></option>
+                            <% lista_autores.forEach(function(autores) { %>
+                            <option <% if (autores.aut_codigo == livro[0].aut_codigo) { %> selected="selected" <% }%>  value="<%= autores.aut_codigo %>"><%= autores.aut_apelido %></option>
+                            <% }); %>
+                        </select>
+                    </div>
+                </div>
+
+                <div class="form-group row">
+                    <label for="edt_codigo" class="col-md-4 col-form-label text-right">Editora:</label>
+                    <div class="form-group col-md-5" >
+                        <select name="edt_codigo" id="edt_codigo" class="form-control form-control-sm" required aria-describedby="editoraHelp" style="width:300px" >
+                            <option value=""></option>
+                            <% lista_editoras.forEach(function(editoras) { %>
+                            <option <% if (editoras.edt_codigo == livro[0].edt_codigo) { %> selected="selected" <% }%> value="<%= editoras.edt_codigo %>"><%= editoras.edt_nome %></option>
+                            <% }); %>
+                        </select>
+                    </div>
+                </div>
+                <br>
+                
+            </div>
+            <div class="form-group row">
+                <div class="col-md-6"></div>
+                <div class="col-md-3">
+                    <button type="submit" class="btn btn-primary btn-block">Salvar </button>                    
+                </div>
+                <br>
+                <div class="col-md-3">
+                    <a class="btn btn-secondary btn-block" href="/livros/Listar">Voltar</a>
+                </div>
+            </div>
+        </form>
+        <hr>
+    </div>
+
+	    
+</body>
+
+</html>

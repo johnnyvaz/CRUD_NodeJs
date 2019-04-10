@@ -1,0 +1,64 @@
+
+        <%- contentFor('body') %>
+
+    <div class="container-fluid">
+
+        <h3>
+            Nova Editora
+        </h3>
+        <hr>
+        <br>
+        
+<!-- aponta para o roteamento-->        
+        <form action="/editoras/salvar" method="post">
+
+            <div class="form-group row">
+                <div class="col-md-1">
+                    <label>Codigo: </label>
+                    <input type="text" value="<%= livro[0].liv_codigo%>" name="liv_codigo" class="form-control" placeholder="Codigo" size="5" readonly>
+                </div>
+                <br>
+
+                <div class="col-md-5">
+                    <label>Título: </label>
+                    <input type="text" value="<%= livro[0].liv_titulo%>" name="liv_titulo" class="form-control" placeholder="Título" size="60" maxlength="50">
+                </div>
+                <br>
+
+                <div class="col-md-2">
+                    <label>Edição: </label>
+                    <input type="text" class="form-control" value="<%= livro[0].liv_edicao%>" name="liv_edicao" placeholder="Edição" size="15" maxlength="10">
+                </div>
+                <br>
+
+                <div class="col-md-2">
+                    <label>Isbn: </label>
+                    <input type="text" class="form-control" value="<%= livro[0].liv_isbn%>" name="liv_isbn" placeholder="Isbn" size="25" maxlength="20">
+                </div>
+                <br>
+
+                <div class="col-md-2">
+                    <label>Ano: </label>
+                    <input type="text" class="form-control" value="<%= livro[0].liv_ano%>" name="liv_ano" placeholder="Ano" size="5" maxlength="5">
+                </div>
+                <br>    
+    
+            </div>
+            <div class="form-group row">
+                <div class="col-md-6"></div>
+                <div class="col-md-3">
+                    <button type="submit" class="btn btn-primary btn-block">Salvar </button>                    
+                </div>
+                <br>
+                <div class="col-md-3">
+                    <a class="btn btn-secondary btn-block" href="/livros/Listar">Voltar</a>
+                </div>
+            </div>
+        </form>
+        <hr>
+    </div>
+
+	    
+</body>
+
+</html>

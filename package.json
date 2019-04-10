@@ -4,15 +4,22 @@
   "version": "0.0.1",
   "private": false,
   "scripts": {
-    "start": "node app.js"
+    "start": "nodemon",
+    "production": "pm2 start app.js --name trabalhoScript"
   },
   "dependencies": {
     "body-parser": "^1.18.3",
     "consign": "^0.1.6",
     "ejs": "^2.6.1",
-    "express": "^4.16.4"
+    "express": "^4.16.4",
+    "express-ejs-layouts": "^2.5.0",
+    "mysql": "^2.16.0"
   },
   "main": "app.js",
   "author": "",
-  "license": "ISC"
+  "license": "ISC",
+  "devDependencies": {
+    "pm2": "^3.4.1",
+    "nodemon": "1.18.4"
+  }
 }

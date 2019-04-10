@@ -42,19 +42,20 @@ CREATE  TABLE IF NOT EXISTS `dados191n`.`livros` (
   `liv_dtcadastro` TIMESTAMP NULL ,
   `liv_titulo` VARCHAR(50) NULL ,
   `liv_edicao` VARCHAR(10) NULL ,
+  `liv_isbn`  VARCHAR(20) NULL,
   `liv_ano` DECIMAL(10,0) NULL ,
   `autores_aut_codigo` INT NOT NULL ,
   `editoras_edt_codigo` INT NOT NULL ,
-  PRIMARY KEY (`liv_codigo`, `autores_aut_codigo`, `editoras_edt_codigo`) ,
-  INDEX `fk_livros_autores` (`autores_aut_codigo` ASC) ,
-  INDEX `fk_livros_editoras1` (`editoras_edt_codigo` ASC) ,
+  PRIMARY KEY (`liv_codigo`, `aut_codigo`, `edt_codigo`) ,
+  INDEX `fk_livros_autores` (`aut_codigo` ASC) ,
+  INDEX `fk_livros_editoras1` (`edt_codigo` ASC) ,
   CONSTRAINT `fk_livros_autores`
-    FOREIGN KEY (`autores_aut_codigo` )
+    FOREIGN KEY (`aut_codigo` )
     REFERENCES `dados191n`.`autores` (`aut_codigo` )
     ON DELETE NO ACTION
     ON UPDATE NO ACTION,
   CONSTRAINT `fk_livros_editoras1`
-    FOREIGN KEY (`editoras_edt_codigo` )
+    FOREIGN KEY (`edt_codigo` )
     REFERENCES `dados191n`.`editoras` (`edt_codigo` )
     ON DELETE NO ACTION
     ON UPDATE NO ACTION)
