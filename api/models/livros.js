@@ -41,10 +41,7 @@ function alterarLivro(dados, callback) {
     "' , aut_codigo = '" + dados.aut_codigo + 
     "' , edt_codigo = '" + dados.edt_codigo + 
     "' , liv_ano = '" + dados.liv_ano + 
-    // "' , liv_ativoinativo = '" + dados.liv_ativoinativo + 
     "' , liv_dtcadastro = '" + dados.liv_dtcadastro + 
     "'  WHERE liv_codigo = '" + dados.liv_codigo + "'";
-//    console.log('Estou alterando o livro.......');
-//    console.log(msql);
     client.query(msql, callback);
 }

@@ -13,12 +13,6 @@ function menuLivros(req, res) {
   res.render('livros/frm_menulivros.ejs', { title: 'Livros' });
 }
 
-function salvarLivro(dados, callback) {
-  var msql = 'INSERT INTO livros SET ? ';
-  
-  client.query(msql, dados, callback);
-}
-
 function livrosBuscar(req, res){
   var id = req.params.codigo;
   Livros.listarUmLivro(id, function(err, result){
@@ -47,20 +41,7 @@ function livrosBuscar(req, res){
   });
 }
 
-function alterarLivro(dados, callback) {
-  var msql = "UPDATE livros SET liv_titulo = '" + dados.liv_titulo + 
-  "' , liv_edicao = '" + dados.liv_edicao + 
-  "' , liv_isbn = '" + dados.liv_isbn + 
-  "' , aut_codigo = '" + dados.aut_codigo + 
-  "' , edt_codigo = '" + dados.edt_codigo + 
-  "' , liv_ano = '" + dados.liv_ano + 
-  "' , liv_ativoinativo = '" + dados.liv_ativoinativo + 
-  "' , liv_dtcadastro = '" + dados.liv_dtcadastro + 
-  "'  WHERE liv_codigo = '" + dados.liv_codigo + "'";
-  //    console.log('Estou alterando o livro.......');
-  //    console.log(msql);
-  client.query(msql, callback);
-}
+
 
 function livrosListar(req, res) {
   Livros.listarLivros(function (err, result) {
@@ -128,7 +109,7 @@ function livrosSalvar(req, res) {
       if (err) {
         throw err;
       }
-      res.redirect('/livros/livrosListar');
+      res.redirect('/livros/listar');
     });
   }
   

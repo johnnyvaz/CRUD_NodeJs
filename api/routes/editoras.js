@@ -8,5 +8,5 @@ app.get('/editoras/listar', controller.editorasListar);
 
 // app.post('/editoras/salvar', controller.editorasSalvar);
 
-// app.get('/editoras/editar/:codigo', controller.editorasBuscar);
+app.get('/editoras/editar/:codigo', controller.editorasEditar);
 

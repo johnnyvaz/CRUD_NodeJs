@@ -34,7 +34,7 @@ app.use(expressLayouts);
 
 
 // configurando a porta para http
-app.set('port', 3000);
+app.set('port', 4000);
 
 consign({ cwd: 'api' })
   .include('models')
